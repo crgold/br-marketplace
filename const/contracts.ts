@@ -4,12 +4,12 @@ import client from "@/lib/client";
 // 1. Set up the network your smart contracts are deployed to.
 // First, import the chain from the package, then set the NETWORK variable to the chain.
 import { getContract } from "thirdweb";
-import { sepolia } from "thirdweb/chains";
-export const NETWORK = sepolia;
+import { arbitrumSepolia } from "thirdweb/chains";
+export const NETWORK = arbitrumSepolia;
 
 // 2. The address of the marketplace V3 smart contract.
 // Deploy your own: https://thirdweb.com/thirdweb.eth/MarketplaceV3
-const MARKETPLACE_ADDRESS = "0x38ab4489E479c9266471bbe8C3794CB30EA11F20";
+const MARKETPLACE_ADDRESS = "0x4CDD4bd894fC28f15E65F96687705162E7Ab8A4F";
 export const MARKETPLACE = getContract({
 	address: MARKETPLACE_ADDRESS,
 	client,
@@ -17,7 +17,7 @@ export const MARKETPLACE = getContract({
 });
 
 // 3. The address of your NFT collection smart contract.
-const NFT_COLLECTION_ADDRESS = "0x72a6eb347D86Bb5DE9c3c6a3DFAb6f2eff80F3C9";
+const NFT_COLLECTION_ADDRESS = "0x16D8C42280EA11b3bD7240838614166a9B86B475";
 export const NFT_COLLECTION = getContract({
 	address: NFT_COLLECTION_ADDRESS,
 	client,
